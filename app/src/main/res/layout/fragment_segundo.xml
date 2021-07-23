@@ -21,5 +21,5 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_margin="18dp"
-        android:text="Ir a primer Fragment"/>
+        android:text="Set Data"/>
 </LinearLayout>

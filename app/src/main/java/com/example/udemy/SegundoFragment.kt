@@ -1,5 +1,6 @@
 package com.example.udemy
 
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -10,6 +11,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.core.os.bundleOf
 import androidx.fragment.app.setFragmentResult
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 
 class SegundoFragment : Fragment(R.layout.fragment_segundo) {
@@ -43,6 +45,8 @@ class SegundoFragment : Fragment(R.layout.fragment_segundo) {
 
         button.setOnClickListener {
             setFragmentResult("requestKey", bundleOf("bundleKey" to result)) // nos pide un requestKey
+            //findNavController().navigate(R.id.product_graph)
+            findNavController().navigate(Uri.parse("ruta://card")) //Deep link para moverse entre varios fragments
         }
 
         texto.text = "$nombre $edad"
